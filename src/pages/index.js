@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/layout/layout";
 import Frontview from "../components/frontview/frontview";
 import SimpleReactLightbox from "simple-react-lightbox";
 
