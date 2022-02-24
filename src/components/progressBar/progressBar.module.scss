@@ -1,0 +1,69 @@
+@import "./src/styles/_variables.scss";
+
+.wrapper {
+    display: flex;
+    
+    color: $white;
+    align-items: center;
+    font-weight: bold;
+    font-size: $l;
+    gap: 19px;
+}
+
+//two animations with same behaviour to reset animation while slide changes
+@keyframes progressBar {
+    0% {
+    width: 0;
+  }
+  87.5% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progressBar2 {
+    0% {
+    width: 0;
+  }
+  87.5% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.bar {
+    width: 208px;
+    height: 6px;
+    background-color: $black;
+    position: relative;
+}
+
+.index {
+  margin: 0;
+  padding: 0px;
+}
+
+.bar__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white; 
+    height: 6px;
+    animation: progressBar 4s ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+@media (max-width: 1200px) {
+
+    .bar {
+        width: 15vw;
+    }
+    .bar__progress {
+        
+    }
+}

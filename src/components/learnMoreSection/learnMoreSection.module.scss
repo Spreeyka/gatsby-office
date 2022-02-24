@@ -1,0 +1,151 @@
+@import "./src/styles/_variables.scss";
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 125px;
+    row-gap: 94px;
+    font-size: $xl;
+    margin: 188px 175px 0 176px;
+    position: relative;
+}
+
+.description {
+    
+    vertical-align: center;
+    width: 200px;
+    font-size: $xxl;
+    font-weight: bold;
+    position: relative;
+    top: -29px;
+    line-height: 58px;
+}
+
+.description::before {
+    position: absolute;
+    content: "";
+    top: 337px;
+    left: 0px;
+    width: 130px;
+    height: 10px;
+    background-color: $black;
+}
+
+.image__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 38px;
+}
+
+.item1 {   
+    gap: 16px;   
+    padding-top: 70px;
+    padding-left: 14px;
+}
+
+.item2
+{
+    gap: 15px;
+    padding-top: 79px;   
+    padding-left: 28px;  
+}
+
+.item3
+{
+    gap: 12px;
+    padding-top: 67px;
+    padding-left: 15px;  
+}
+.item4
+{
+    gap: 0px;
+    
+}
+.item5
+{
+    gap: 4px;
+    padding-top: 9px;
+    padding-left: 14px; 
+}
+
+.item6
+{
+    margin-top: -7px;
+    gap: 5px;
+    padding-left: 28px; 
+}
+
+.item7
+{  
+    gap: 5px;
+    padding-left: 15px; 
+    padding-top: 9px;  
+}
+
+.button__wrapper {
+    position: absolute;
+    bottom: -103px;
+    left: -1px;
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-rows: auto;
+        column-gap: 2vw;
+        justify-items: center;
+        align-items: center;
+        row-gap: 4vw;
+        margin-top: 0;
+        font-size: $m;
+        margin: 0px 15px 0 15px;
+    }
+    .image__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 38px;
+        text-align: center;
+    }
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7
+    {
+        margin-top: 0px;
+        gap: 0px;
+        padding: 0px;
+    }
+    .description {
+        width: auto;
+        height: min-content;
+        font-size: $xl;
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        line-height: 38px;
+    }
+    
+    .description::before {
+        bottom: -10px;
+        left: 0px;
+        top: initial;
+        
+        height: 7px;
+    }
+    .image__wrapper {
+        line-height: 28px;
+    }
+    .button__wrapper {
+        bottom: -100px;    
+    }
+}
+
+@media (max-width: 500px) {
+    .button__wrapper {
+        bottom: -50px;    
+    }
+}

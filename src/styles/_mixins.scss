@@ -1,0 +1,11 @@
+@mixin arrowSlider($tranformPercent: 100%) {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    z-index: 1;
+    mix-blend-mode: difference;
+    transform: translateX($tranformPercent);
+    transition: transform 0.3s ease-out;
+}

@@ -1,0 +1,197 @@
+@import "./src/styles/_variables.scss";
+
+
+.wrapper {
+    width: 100vw;
+    height: 547.21px;
+    background-color: $black;
+    position: relative;
+}
+
+.borderImage {
+    position: absolute;
+    top: -29.85px;
+    right: 175px;
+}
+
+.leftPart__wrapper {
+    position: absolute;
+    margin-left: 172px;
+    margin-top: 12px;
+    color: $white;
+    text-align: left;
+}
+
+.logo {
+    font: normal normal bold 65px/98px Poppins;
+}
+
+.address {
+    margin-left: 3px;
+    margin-top: -28px;
+    font-size: $m;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.phone {
+    margin-left: 1px;
+    margin-top: 25px;
+    font-weight: 300;
+    font: normal normal 600 16px/26px Poppins;
+    letter-spacing: -0.3px;
+}
+
+.mail {
+    margin-left: 3px;
+    letter-spacing: 0.22px;
+}
+
+.policy {
+    margin-left: 3px;
+    margin-top: 143px;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 0.22px;
+}
+
+.midPart__wrapper {
+    font-weight: 300;
+    position: absolute;
+    margin-left: 815px;
+    margin-top: 210px;
+    color: $white;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 61px;
+    row-gap: 16px;
+
+    span {
+        flex-basis: 260px;
+    } 
+}
+.midPart__wrapper > span:nth-last-of-type(-n+2) {
+    margin-top: -2px;
+}
+
+.aDreamLogo {
+    font: normal normal normal 12px/28px Poppins;
+    position: absolute;
+    color: $white;
+    right: 175px;
+    bottom: 40.41px;
+}
+.image {
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+@media (max-width: 1400px) {
+    .midPart__wrapper {
+        margin-left: 615px;
+    }
+    .policy, .phone, .address{
+        margin-left: 0px;
+    }
+    
+}
+
+@media (max-width: 1195px) {
+    .midPart__wrapper {
+        position: absolute;
+        right: 0;
+        margin-top: 150px;
+        margin-left: 0px;
+        margin-right: 172px;
+        flex-flow: column nowrap;
+        column-gap: 0px;
+        row-gap: 10px;
+        span {
+            flex-basis: auto;
+        }
+    }  
+}
+
+@media (max-width: 780px) {
+    .aDreamLogo {
+        right: 110px;
+    }
+    .leftPart__wrapper {
+        margin-left: 82px;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    
+    .aDreamLogo {
+        right: 50px;
+    }
+    .leftPart__wrapper {
+        margin-left: 50px;
+    }
+    .midPart__wrapper {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .aDreamLogo {
+        right: 5vw;
+    }
+    .leftPart__wrapper {
+        margin-left: 5vw;
+    }
+    .midPart__wrapper {
+        margin-right: 5vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .policy {
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 0.22px;
+    }
+    .aDreamLogo {
+        right: 5vw;
+    }
+    .leftPart__wrapper {
+        margin-left: 5vw;
+    }
+    .midPart__wrapper {
+        margin-right: 5vw;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        margin-top: 0px;
+        margin-bottom: 250px;
+        margin-left: 80px;
+        font-size: $xxl;
+    }
+
+    .aDreamLogo {
+        bottom: 0px;
+    }
+
+    .mail, .address, .policy, .phone {
+        font-size: $xs;
+    }
+
+    .leftPart__wrapper {
+        margin-top: 20px;
+        position: absolute;
+        margin-left: 90px;
+        font-size: $xl;
+    }
+    .midPart__wrapper {
+        margin-top: 140px;
+        margin-left: 90px;
+        left: 0;
+        gap: 6px;
+    }
+}

@@ -1,0 +1,132 @@
+@import "./src/styles/_variables.scss";
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 18px;
+    top: 36px;
+    visibility: hidden;
+    display: none;
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: $white;
+  }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: $black;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: $white;
+  }
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: $white;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .bm-item:not(:nth-child(7)) {
+      height: 35px;
+      font-size: $l;
+      text-align: center;
+      display: inline-block;
+      margin: 25px auto;
+      color: black;
+      box-shadow: 0 2px 2px hsla(0, 0%, 0%, .2);
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .icon {
+    font-size: 40px;
+    color: black;
+}
+
+.icons-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    justify-content: center;
+    gap: 35px;
+    width: 100%;
+    display: flex!important;
+}
+
+
+.icon-shadow {
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2);
+}
+
+.icon-shadow:hover {
+    background-color: #424548;
+    color: $white;
+    filter: invert(1);
+}
+
+.logo {
+    position: absolute;
+    width: 200px;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: none!important;
+}
+
+.bm-item:nth-child(-n+5):hover {
+  background-color: #424548;
+  color: $white;
+}
+
+@media (max-width: 580px) {
+    .bm-burger-button {
+        visibility: visible;
+        display: unset;
+        
+    }
+}
+
+@media (max-width: 450px) {
+  .bm-burger-button {
+    width: 26px;
+    height: 20px;   
+  }
+}

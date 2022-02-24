@@ -1,0 +1,93 @@
+@import "./src/styles/_variables.scss";
+
+.wrapper {
+    position: relative;
+    max-width: fit-content;
+}
+
+.image__wrapper {
+    position: relative;
+    width: 1585px;
+    height: 642px;
+    
+}
+
+.logo {
+    position: absolute;
+    right: 175px;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.desc {
+    position: absolute;
+    color: $black;
+    font: normal normal bold 65px/75px Poppins;
+    left: -160px;
+    top: 220px;
+}
+
+.desc::after {
+    content: "";
+    width: 610px;
+    height: 20px;
+    position: absolute;
+    background-color: $black;
+    bottom: -191px;
+    left: 0;
+}
+
+@media (max-width: 1800px) {
+    .wrapper{
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .image__wrapper {
+        background: rgba($color: #ffffff, $alpha: 0.27);
+    }
+    .image__overlay{
+        mix-blend-mode: overlay;
+    }
+    .desc {
+        display: flex;
+        font-size: 4vw;
+        left: 100px;
+        top: 25%;       
+    }
+    .desc::after {
+        width: 30vw;
+        height: 12px;
+        bottom: -30%;
+    }
+    .logo {
+        width: 30vw;
+        right: 0;
+        top: 0;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .desc {
+        font-size: 5.5vw;    
+    }
+}
+
+@media (max-width: 800px) {
+
+    .desc {
+        line-height: 8vw;   
+    }
+}
+
+@media (max-width: 600px) {
+
+    .desc {
+        font-size: 40px; 
+        line-height: 50px;
+    }
+}

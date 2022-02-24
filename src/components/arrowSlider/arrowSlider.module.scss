@@ -1,0 +1,48 @@
+@import "./src/styles/_variables.scss";
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper::before {
+    content: '';
+    width: 26px;
+    height: 3px;
+    background-color: $black;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-bottom: 3px;
+    margin-left: -1px;
+  }
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7.5px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+  }
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+@media (max-width: 500px) {
+  .wrapper::before {
+    width: 16px;
+    height: 2px;
+  }
+  .arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3.5px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+  }
+}

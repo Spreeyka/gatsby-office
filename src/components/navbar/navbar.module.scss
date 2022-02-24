@@ -1,0 +1,142 @@
+@import "./src/styles/_variables.scss";
+
+.wrapper {
+    display: flex;  
+    color: white;
+    letter-spacing: -0.32px;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.links {
+    display: flex;
+    margin-left: 103px;
+    gap: 64px;
+}
+
+a {
+    display: block;
+	position: relative;
+	padding: 0.2em 0;
+}
+
+a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.05em;
+	background-color: $white;
+	transform: scale(0);
+	transform-origin: center;
+    transition: transform 0.3s;
+}
+
+a:hover::after,
+a:focus::after{
+	transform: scale(1);
+}
+
+.moved { 
+    margin-left: 47px;
+    display: flex;
+    gap: 110px;
+}
+
+.logo {
+    margin-top: -24px;
+}
+
+.pushedIcons {
+    display: flex;
+    margin-right: 160px;
+    margin-left: 320px;
+    margin-top: -2px;
+    display: flex;
+    gap: 22px;
+}
+
+.icon {
+    font-size: 20px;
+    color: black;
+}
+
+.fb {
+    font-size: 17px;
+    color: black;
+}
+
+.hidden {
+    display: contents;
+}
+
+.iconWrapper {   
+    width: 28px;
+    height: 27px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media (max-width: 1700px) {
+    .pushedIcons {
+        margin-top: -2px;
+        display: flex;
+        gap: 22px;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1450px) {
+
+    .logo__wrapper {
+        width: 120px;
+    }
+
+    .wrapper {
+        margin-left: 0;
+        width: 80vw;
+        gap: 2vw;
+        justify-content: flex-start;
+
+    }
+    
+    .moved { 
+        margin-left: 0px;
+        display: flex;
+        gap: 32px;
+    }
+    .links {
+        display: flex;
+        margin-left: 22px;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .logo__wrapper {
+        width: 80px;
+        margin-top: 15px;
+    }
+    .pushedIcons {
+        right: 0;
+        bottom: -420px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 580px) {
+    .hidden {
+        visibility: hidden;
+        display: none;
+    }
+    .logo__wrapper {
+        width: 24vw;
+        top: 0px;
+    }
+}
