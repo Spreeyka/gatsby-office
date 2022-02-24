@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
 import { slide as Menu } from "react-burger-menu";
-import styles from "./hamburgerMenu.scss";
+import styles from "./hamburgerMenu.scss"; //do not delete
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { StaticImage } from "gatsby-plugin-image";
@@ -13,22 +13,24 @@ export default function HamburgerMenu() {
     setScrollPosition(position);
   };
 
-  let bar = document.querySelectorAll(".bm-burger-bars");
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    if (scrollPosition > 450) {
-      for (let i = 0; i < bar.length; i++) {
-        bar[i].style.background = "black";
+    let bar;
+    if (typeof window === "undefined" || !window.document) {
+      bar = document.querySelectorAll(".bm-burger-bars");
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      if (scrollPosition > 450) {
+        for (let i = 0; i < bar.length; i++) {
+          bar[i].style.background = "black";
+        }
+      } else {
+        for (let i = 0; i < bar.length; i++) {
+          bar[i].style.background = "white";
+        }
       }
-    } else {
-      for (let i = 0; i < bar.length; i++) {
-        bar[i].style.background = "white";
-      }
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
     }
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, [scrollPosition]);
 
   return (
