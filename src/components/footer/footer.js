@@ -22,7 +22,7 @@ export default function Footer() {
         src="../../images/Group 586.svg"
         alt=""
         width={290}
-        height={68.23}
+        height={68}
         layout="fixed"
       />
       <div className={leftPart__wrapper}>
