@@ -61,9 +61,9 @@ export default function Form() {
             więcej...
           </label>
         </div>
-        {/* <div className={button__wrapper}>
-          <Button formId="form"></Button>
-        </div> */}
+        <div className={button__wrapper}>
+          <Button></Button>
+        </div>
         <p>
           <button type="submit">Send</button>
         </p>
