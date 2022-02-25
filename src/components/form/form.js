@@ -17,7 +17,7 @@ export default function Form() {
       className={wrapper}
       id="form"
       name="contact"
-      method="POST"
+      action="POST"
       data-netlify="true"
       // onSubmit={handleSubmit}
     >
