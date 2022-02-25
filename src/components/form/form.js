@@ -12,13 +12,18 @@ import {
 } from "./form.module.scss";
 
 export default function Form() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("Kliknięto na przycisk Wyślij.");
+  }
   return (
     <form
       className={wrapper}
-      name="contact"
       id="form"
+      name="contact"
       method="POST"
       data-netlify="true"
+      onSubmit={handleSubmit}
     >
       <p className={bold}>
         Lorem ipsum<br></br> Lorem ipsum lorem ipsum
