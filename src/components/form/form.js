@@ -13,17 +13,61 @@ import {
 
 export default function Form() {
   return (
-    <form name="Contact Form" method="POST" data-netlify="true">
+    <form
+      className={wrapper}
+      name="Contact Form"
+      method="POST"
+      data-netlify="true"
+    >
       <input type="hidden" name="form-name" value="Contact Form" />
-      <div>
-        <label>Your Email:</label>
-        <input type="email" name="email" />
+      <p className={bold}>
+        Lorem ipsum<br></br> Lorem ipsum lorem ipsum
+      </p>
+      <p className={faded}>consectetur adipiscing elit. Ut auctor arcu</p>
+      <p className={contact}>Zostaw kontakt, zadzwonimy do Ciebie</p>
+      <div className={input__wrapper}>
+        <input
+          className={input}
+          placeholder="Imię i nazwisko"
+          type="text"
+          id="name"
+          name="name"
+        />
+        <input
+          className={input}
+          placeholder="Telefon"
+          type="tel"
+          id="phone"
+          name="phone"
+        />
+        <input
+          className={input}
+          placeholder="Email"
+          type="email"
+          id="mail"
+          name="mail"
+        />
+        <input
+          className={input}
+          placeholder="Lorem ipsum lorem ipsum"
+          type="text"
+          id="desc"
+          name="desc"
+        />
+        <div className={checkboxWrapper}>
+          <input type="checkbox" id="term" name="term" required />
+          <label htmlFor="term">
+            Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych
+            więcej...
+          </label>
+        </div>
+        <div className={button__wrapper}>
+          <Button formId="form"></Button>
+        </div>
+        {/* <p>
+          <button type="submit">Send</button>
+        </p> */}
       </div>
-      <div>
-        <label>Message:</label>
-        <textarea name="message" />
-      </div>
-      <button type="submit">Send</button>
     </form>
     // <form
     //   className={wrapper}
