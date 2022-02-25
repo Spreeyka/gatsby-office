@@ -18,6 +18,7 @@ export default function Form() {
       id="form"
       name="contact"
       action="POST"
+      method="POST"
       data-netlify="true"
       // onSubmit={handleSubmit}
     >
