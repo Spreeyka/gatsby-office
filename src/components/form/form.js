@@ -13,7 +13,13 @@ import {
 
 export default function Form() {
   return (
-    <form className={wrapper} id="form">
+    <form
+      className={wrapper}
+      name="contact"
+      id="form"
+      method="POST"
+      data-netlify="true"
+    >
       <p className={bold}>
         Lorem ipsum<br></br> Lorem ipsum lorem ipsum
       </p>
