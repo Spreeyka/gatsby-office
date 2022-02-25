@@ -115,22 +115,36 @@ a:focus::after{
         margin-left: 22px;
         gap: 32px;
     }
+    .pushedIcons {
+        margin-left: 150px;
+        margin-right: 0;
+
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 940px) {
 
     .logo__wrapper {
         width: 80px;
         margin-top: 15px;
     }
     .pushedIcons {
-        right: 0;
-        bottom: -420px;
-        position: absolute;
+        right: 0px;
+        bottom: -38vw;
+        position: relative;
+        margin: 0;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 800px) {
+
+    .pushedIcons {
+        bottom: -425px;
+        right: 100px;
+    }
+}
+
+@media (max-width: 630px) {
     .hidden {
         visibility: hidden;
         display: none;
