@@ -17,7 +17,6 @@ export default function Form() {
       className={wrapper}
       id="form"
       name="contact"
-      action="POST"
       method="POST"
       data-netlify="true"
       // onSubmit={handleSubmit}
@@ -63,9 +62,12 @@ export default function Form() {
             więcej...
           </label>
         </div>
-        <div className={button__wrapper}>
+        {/* <div className={button__wrapper}>
           <Button formId="form"></Button>
-        </div>
+        </div> */}
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </div>
     </form>
   );
