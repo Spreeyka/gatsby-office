@@ -55,13 +55,13 @@ export default function Form() {
           id="desc"
           name="desc"
         />
-        <div className={checkboxWrapper}>
+        {/* <div className={checkboxWrapper}>
           <input type="checkbox" id="term" name="term" required />
           <label htmlFor="term">
             Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych
             więcej...
           </label>
-        </div>
+        </div> */}
         {/* <div className={button__wrapper}>
           <Button formId="form"></Button>
         </div> */}
