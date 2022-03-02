@@ -16,11 +16,13 @@ module.exports = {
       },
       __key: "images",
     },
-    // {
-    //   resolve: "gatsby-plugin-sass",
-    //   options: {
-    //     additionalData: `@import "${__dirname}/src/styles/_styles.scss";`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `e8f82d14467e075cdd5ad2eecca498`,
+        preview: false,
+        disableLiveReload: false,
+      },
+    },
   ],
 };

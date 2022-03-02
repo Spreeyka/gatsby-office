@@ -1,54 +1,40 @@
-import { StaticImage } from "gatsby-plugin-image";
-import { wrapper, date } from "./newsSection.module.scss";
+import { wrapper, new__wrapper, date } from "./newsSection.module.scss";
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function NewsSection() {
+  const data = useStaticQuery(graphql`
+    {
+      allDatoCmsNews {
+        nodes {
+          date
+          title
+          image {
+            gatsbyImageData(
+              imgixParams: { fit: "crop", w: "450", h: "334", auto: "format" }
+            )
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <section>
       <h2>Aktualności</h2>
       <div className={wrapper}>
-        <div>
-          <StaticImage
-            src="../../images/shutterstock_1433594243.png"
-            alt="icon"
-            width={450}
-            height={334}
-            quality={90}
-          />
-          <p className={date}>01.01.2021</p>
-          <h3>
-            Lorem ipsum dolor sit amet,<br></br>consectetur adipiscing elit.
-          </h3>
-          <p>Więcej</p>
-        </div>
-        <div>
-          <StaticImage
-            src="../../images/shutterstock_763511701@2x.png"
-            alt="icon"
-            width={450}
-            height={334}
-            quality={90}
-          />
-          <p className={date}>01.01.2021</p>
-          <h3>
-            Lorem ipsum dolor sit amet,<br></br>consectetur adipiscing elit.
-          </h3>
-          <p>Więcej</p>
-        </div>
-        <div>
-          <StaticImage
-            src="../../images/shutterstock_763511701@2x.png"
-            alt="icon"
-            width={450}
-            height={334}
-            quality={90}
-          />
-          <p className={date}>01.01.2021</p>
-          <h3>
-            Lorem ipsum dolor sit amet,<br></br>consectetur adipiscing elit.
-          </h3>
-          <p>Więcej</p>
-        </div>
+        {data.allDatoCmsNews.nodes.map((singleNew) => (
+          <div className={new__wrapper}>
+            <GatsbyImage
+              image={singleNew.image.gatsbyImageData}
+              objectFit="contain"
+            />
+            <p className={date}>{singleNew.date}</p>
+            <h3>{singleNew.title}</h3>
+            <p>Więcej</p>
+          </div>
+        ))}
       </div>
     </section>
   );
