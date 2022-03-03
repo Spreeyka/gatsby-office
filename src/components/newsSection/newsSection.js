@@ -1,6 +1,6 @@
-import { wrapper, new__wrapper, date } from "./newsSection.module.scss";
+import { wrapper, new__wrapper, date, link } from "./newsSection.module.scss";
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function NewsSection() {
@@ -8,6 +8,7 @@ export default function NewsSection() {
     {
       allDatoCmsNews {
         nodes {
+          id
           date
           title
           image {
@@ -25,14 +26,17 @@ export default function NewsSection() {
       <h2>Aktualności</h2>
       <div className={wrapper}>
         {data.allDatoCmsNews.nodes.map((singleNew) => (
-          <div className={new__wrapper}>
+          <div className={new__wrapper} key={singleNew.id}>
             <GatsbyImage
               image={singleNew.image.gatsbyImageData}
               objectFit="contain"
+              alt=""
             />
             <p className={date}>{singleNew.date}</p>
             <h3>{singleNew.title}</h3>
-            <p>Więcej</p>
+            <Link to={singleNew.id} className={link}>
+              Więcej
+            </Link>
           </div>
         ))}
       </div>

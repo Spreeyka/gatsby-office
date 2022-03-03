@@ -12,6 +12,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allDatoCmsNews(limit: 1000) {
           edges {
             node {
+              content {
+                value
+              }
               date
               id
               title
